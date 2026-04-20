@@ -1,0 +1,23 @@
+{
+  "name": "cred-store",
+  "version": "1.0.0",
+  "dependencies": {
+    "@sap/cds": "^9",
+    "axios": "^1.15.0",
+    "node-forge": "^1.3.1"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "private": true,
+  "cds": {
+    "requires": {
+      "credential-store": {
+        "kind": "credential-store"
+      }
+    }
+  }
+}
