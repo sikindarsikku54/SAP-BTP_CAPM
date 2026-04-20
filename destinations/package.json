@@ -1,0 +1,36 @@
+{
+  "name": "destinations",
+  "version": "1.0.0",
+  "dependencies": {
+    "@cap-js/hana": "^2.7.0",
+    "@sap-cloud-sdk/http-client": "^4.5.1",
+    "@sap-cloud-sdk/resilience": "^4.5.1",
+    "@sap/cds": "^9",
+    "@sap/xssec": "^4",
+    "axios": "^1.15.0"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2",
+    "@sap/cds-dk": "^9.8.4"
+  },
+  "scripts": {
+    "start": "npx cds-serve"
+  },
+  "private": true,
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "hana"
+      },
+      "DESTNATIONS": {
+        "kind": "rest",
+        "credentials": {
+          "destination": "DESTNATIONS"
+        }
+      },
+      "[production]": {
+        "auth": "dummy"
+      }
+    }
+  }
+}
